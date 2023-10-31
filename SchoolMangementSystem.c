@@ -1,10 +1,10 @@
-/************************************************************************************************************************************** 
-*                                           Author:  Abdelrahman Gamal Abdelwanies Mohamed                                            *
-*											Created: 16/10/2023                                                                       *
-*											Project: School Mangement System                                                          *
-*											File: SchoolMangementSystem.c                                                             *
-*											[NTI Embedded C Graduiation Project] 													  *
-**************************************************************************************************************************************/
+/***************************************************************************************************** 
+*                           Author:  Abdelrahman Gamal Abdelwanies Mohamed                           *
+*							Created: 16/10/2023                                                      *
+*							Project: School Mangement System                                         *
+*							File: SchoolMangementSystem.c                                            *
+*							[NTI Embedded C Graduiation Project] 		                             *
+*****************************************************************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +13,7 @@
 #include "Sort.h"
 #include "SchoolMangementSystem.h"
 
-/**********************************************************[Auxiliary Functions]********************************************************/
+/***************************************[Auxiliary Functions]****************************************/
 u32 ID_Generator (Student_t *Head,u32 Nodes)
 {
 	u32 Local_Return=0;
@@ -74,11 +74,10 @@ Error_State BirthDate_Validation(Student_t *Student)
 		return Local_Return; 
 	}
 }
-/***************************************************************************************************************************************/
+/***********************************************************************************************/
 
 
-/**********************************************************[Main Functions]*************************************************************/
-
+/***************************************[Main Functions]****************************************/
 
 Error_State Main_Menu(Student_t *Head,Student_t **Head_Address)
 {
@@ -128,7 +127,7 @@ Error_State Main_Menu(Student_t *Head,Student_t **Head_Address)
 
 		default:
 			printf("\n ERROR!!: Invalid Option [Input Options: 1->6]\n");
-			printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+			printf("\n ==================================[Process Finished]==================================\n\n");
 			Main_Return=NOT_OK;
 			return Main_Return;
 			break;
@@ -191,7 +190,7 @@ void New_Student (Student_t *Head,Student_t **Head_Address)
 		scanf("%u",&(New_Student->Score));
 
 		printf("\n New Student Name[%s]-->ID[%u] Created Successfully..\n\n",(New_Student->Name),(New_Student->ID));
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 
 		/*Make List Adress Point to New Student */
 		(New_Student->Ptr_Next)=*Head_Address;
@@ -257,7 +256,7 @@ void New_Student (Student_t *Head,Student_t **Head_Address)
 		scanf("%u",&((Head->Ptr_Next)->Score));
 
 		printf("\n New Student Name[%s]-->ID[%u] Added Successfully..\n\n",((Head->Ptr_Next)->Name),((Head->Ptr_Next)->ID));
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
         ((Head->Ptr_Next)->Ptr_Next) = NULL;
 	}
 }
@@ -276,7 +275,7 @@ void Delete_Student (Student_t *Head,Student_t **Head_Address)
 	if (Head==NULL)
 	{
 		printf("\n WARNING!!: The Registration Data Base is Empty [NO Students to Delete]\n");
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return ;
 	}
 
@@ -291,7 +290,7 @@ void Delete_Student (Student_t *Head,Student_t **Head_Address)
 
 		printf("\n The Student Name[%s]->>ID[%u] Record has been Deleted Successfully.. \n",(Head->Name),ID);
 		printf("\n The Registration Data Base becomes Empty [NO Students Registered] \n");
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return ;
 	}
 	
@@ -302,7 +301,7 @@ void Delete_Student (Student_t *Head,Student_t **Head_Address)
 		free(Head);
 
 		printf("\n The Student Name[%s]->>ID[%u] Record has been Deleted Successfully..\n",(Head->Name),ID);
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return ;
 	}
 
@@ -317,7 +316,7 @@ void Delete_Student (Student_t *Head,Student_t **Head_Address)
 	if(Head==NULL)
 	{
 		printf("\n WARNING!!: The ID[%u] NOT Registered in The Registeration Data Base.. \n",ID);
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return ;
 	}
 
@@ -327,7 +326,7 @@ void Delete_Student (Student_t *Head,Student_t **Head_Address)
 		free(Head);
 
 		printf("\n The Student of ID[%u] Record Has Been Deleted Successfully.. \n",ID);
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 	}
 		
 }
@@ -341,16 +340,15 @@ void Students_List (Student_t *Head)
 	if (Head==NULL)
 	{
 		printf("\n WARNING!!: The Registration Data Base is Empty [NO Students to List]\n");
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return;
 	}
 
 	else
 	{	
-		printf("\n ==================================================================[Registeration Data Base]=================================================================\n\n");
+		printf("\n ==================================[Registeration Data Base]==================================\n\n");
 		Students_Sort(Head,KEY_NAME);
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
-			
+		printf("\n ==================================[Process Finished]==================================\n\n");
 	}
 }
 
@@ -363,7 +361,7 @@ void Students_Edit (Student_t *Head)
 	if (Head==NULL)
 	{
 		printf("\n WARNING!!: The Registration Data Base is Empty [NO Students to Modify]\n");
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return;
 	}
 
@@ -435,7 +433,7 @@ void Students_Edit (Student_t *Head)
 
 					default:
 						printf("\n ERROR!!: Invalid Modifing Option [Input Options: 1->7]..\n\n");
-						printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+						printf("\n ==================================[Process Finished]==================================\n\n");
 						return;
 						break;
 				}
@@ -444,7 +442,7 @@ void Students_Edit (Student_t *Head)
 			Head=(Head->Ptr_Next);
 		}
 		printf("\n Name[%s]-->ID[%u] Modified Successfully..\n\n",(Head->Name),(Head->ID));
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return;
 	}
 }
@@ -460,7 +458,7 @@ void Students_Score (Student_t *Head)
 	if(Head==NULL)
 	{
 		printf("\n WARNING!!: The Registration Data Base is Empty [NO Students to Update Score]\n");
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return;
 	}
 	else
@@ -472,27 +470,27 @@ void Students_Score (Student_t *Head)
 				printf("\nPLS Enter The Updated Score: ");
 				scanf(" %d",&(Head->Score));
 				printf("\n The Score Of The Student [%s]-->ID[%u] Updated Successfully..\n\n",(Head->Name),(Head->ID));
-				printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+				printf("\n ==================================[Process Finished]==================================\n\n");
 				return;
 			}
 			
 			Head=(Head->Ptr_Next);
 		}
 		printf("\n WARNING!!: The ID[%u] NOT Registered in The Registeration Data Base.. \n",ID);
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 	}
 }
 
 
 void Rank_Students (Student_t *Head)
 {
-	printf("\n ================================================================[Computer Scince Score Sheet]================================================================\n");
+	printf("\n ==================================[Computer Scince Score Sheet]==================================\n");
 
 	/* If The Registration Data Base is Empty */
 	if(Head==NULL)
 	{
 		printf("\n WARNING!!: The Registration Data Base is Empty [NO Students to Rank Score]\n");
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 		return;
 	}
 
@@ -500,12 +498,12 @@ void Rank_Students (Student_t *Head)
 	else if ((Head->Ptr_Next)==NULL)
 	{
 		printf("\n Only ONE Student Registered: Name[%s]\tID[%d]\tComputer Scince Score[%d]\n",(Head->Name),(Head->ID),(Head->Score));
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 	}
 
 	else if((Head->Ptr_Next)!=NULL)
 	{
 		Students_Sort(Head,KEY_SCORE);
-		printf("\n ======================================================================[Process Finished]=====================================================================\n\n");
+		printf("\n ==================================[Process Finished]==================================\n\n");
 	}
 }
