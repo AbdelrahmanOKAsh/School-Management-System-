@@ -1,7 +1,8 @@
 /***************************************************************************************************** 
 *                           Author:  Abdelrahman Gamal Abdelwanies Mohamed                           *
-*							              Created: 16/10/2023                                                      *
-*							              File: STD_TYPES                                                          *
+*			    Created: 16/10/2023                                                      *
+*			    Project: School Mangement System                                         *
+*			    File: STD_TYPES.h                                                             *
 *****************************************************************************************************/
 #ifndef STD_TYPES_H_
 #define STD_TYPES_H_
