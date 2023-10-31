@@ -1,9 +1,9 @@
 /***************************************************************************************************** 
 *                           Author:  Abdelrahman Gamal Abdelwanies Mohamed                           *
-*							Created: 16/10/2023                                                      *
-*							Project: School Mangement System                                         *
-*							File: SchoolMangementSystem.c                                            *
-*							[NTI Embedded C Graduiation Project] 		                             *
+*			    Created: 16/10/2023                                                      *
+*			    Project: School Mangement System                                         *
+*			    File: SchoolMangementSystem.c                                            *
+*			    [NTI Embedded C Final Project] 		                             *
 *****************************************************************************************************/
 
 #include <stdio.h>
