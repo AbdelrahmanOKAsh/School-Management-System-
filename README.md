@@ -1,6 +1,6 @@
 # School Management System
 
-School Management System Implemented Based on Data Structures and Algorithms (Linked-List & Sorting Algorithm) in C Language.
+School Management System Implemented Based on Data Structures [Linked-List] and Algorithms [Sorting and Searching Algorithms] in C Language.
 
 🎯 Features
         ✅ Creating a New Student Record
