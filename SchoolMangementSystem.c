@@ -257,7 +257,7 @@ void New_Student (Student_t *Head,Student_t **Head_Address)
 
 		printf("\n New Student Name[%s]-->ID[%u] Added Successfully..\n\n",((Head->Ptr_Next)->Name),((Head->Ptr_Next)->ID));
 		printf("\n ==================================[Process Finished]==================================\n\n");
-        ((Head->Ptr_Next)->Ptr_Next) = NULL;
+        	((Head->Ptr_Next)->Ptr_Next) = NULL;
 	}
 }
 
