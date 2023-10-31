@@ -1,11 +1,10 @@
 /***************************************************************************************************** 
 *                           Author:  Abdelrahman Gamal Abdelwanies Mohamed                           *
-*							Created: 16/10/2023                                                      *
-*							Project: School Mangement System                                         *
-*							File: Sort.c                                                             *
-*							[NTI Embedded C Final Project] 		                                     *
+*			    Created: 16/10/2023                                                      *
+*			    Project: School Mangement System                                         *
+*			    File: Sort.c                                                             *
+*			    [NTI Embedded C Final Project] 		                             *
 *****************************************************************************************************/
-
 #include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
